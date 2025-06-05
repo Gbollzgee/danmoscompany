@@ -6,6 +6,44 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+
+/* Moving banner at the top */
+.moving-text-banner {
+  width: 100%;
+  overflow: hidden;
+  background: #000; /* or your preferred background */
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.moving-text-banner p {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 15s linear infinite;
+  padding-left: 100%; /* Start off-screen */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Push down the rest of the content to make space for fixed banner */
+body {
+  padding-top: 50px; /* Adjust based on banner height */
+}
+
+
+
 body {
   line-height: 1.6;
   color: #333;
