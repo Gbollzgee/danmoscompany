@@ -20,6 +20,49 @@ body {
   padding: 20px 0;
 }
 
+/* Makes the header layout flexible */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Overlay logo in hero section */
+#hero {
+  position: relative;
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #f5f5f5; /* Adjust or replace with your background */
+  overflow: hidden;
+}
+
+.hero-logo-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.05; /* Transparency level */
+  z-index: 0;
+}
+
+.hero-logo-overlay img {
+  max-width: 300px;
+  height: auto;
+}
+
+/* Ensure text appears above the logo */
+#hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+
 /* Header */
 header {
   background: linear-gradient(to right, #4b0082, #8a2be2);
