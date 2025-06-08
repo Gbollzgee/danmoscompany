@@ -6,12 +6,11 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-
 /* Moving banner at the top */
 .moving-text-banner {
   width: 100%;
   overflow: hidden;
-  background: #000; /* or your preferred background */
+  background: rgba(0, 0, 0, 0.3);
   color: #fff;
   font-weight: bold;
   padding: 10px 0;
@@ -25,7 +24,7 @@
   display: inline-block;
   white-space: nowrap;
   animation: scroll-left 45s linear infinite;
-  padding-left: 100%; /* Start off-screen */
+  padding-left: 100%;
 }
 
 @keyframes scroll-left {
@@ -39,15 +38,10 @@
 
 /* Push down the rest of the content to make space for fixed banner */
 body {
-  padding-top: 50px; /* Adjust based on banner height */
-}
-
-
-
-body {
+  padding-top: 50px;
   line-height: 1.6;
-  color: #333;
-  background: linear-gradient(to bottom right, #f8f9fa, #e0eafc);
+  color: #fff;
+  background: linear-gradient(to right, #10b981, #22c55e);
 }
 
 /* Container */
@@ -60,7 +54,7 @@ body {
 
 /* Header */
 header {
-  background: linear-gradient(to right, #4b0082, #8a2be2);
+  background: rgba(0, 0, 0, 0.3);
   color: white;
   padding: 20px 0;
 }
@@ -86,13 +80,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ffeb3b;
+  color: #25d366;
 }
 
-/* Hero section with texture */
+/* Hero section */
 #hero {
-  background: url('https://www.transparenttextures.com/patterns/arches.png'),
-              linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%);
+  background: rgba(0, 0, 0, 0.2);
   color: white;
   text-align: center;
   padding: 100px 20px;
@@ -111,12 +104,12 @@ nav ul li a:hover {
 /* Products Section */
 #products {
   padding: 60px 0;
-  background: linear-gradient(to right, #f6d365, #fda085);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 #products h2 {
   text-align: center;
-  color: #333;
+  color: white;
   margin-bottom: 40px;
 }
 
@@ -127,13 +120,14 @@ nav ul li a:hover {
 }
 
 .product-card {
-  background: #ffffffcc;
-  border: 2px solid #ddd;
+  background: white;
+  border: none;
   border-radius: 12px;
   padding: 20px;
   text-align: center;
   transition: transform 0.3s;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  color: #0f172a;
 }
 
 .product-card:hover {
@@ -148,20 +142,25 @@ nav ul li a:hover {
 }
 
 .product-card h3 {
-  color: #4b0082;
+  color: #0f172a;
   margin-top: 15px;
+}
+
+.product-card p {
+  color: #475569;
 }
 
 /* About and Contact Sections */
 #about, #contact {
   padding: 60px 0;
-  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  background: rgba(0, 0, 0, 0.2);
   text-align: center;
+  color: white;
 }
 
 #about h2, #contact h2 {
   margin-bottom: 20px;
-  color: #333;
+  color: white;
 }
 
 #about p, #contact p {
@@ -169,6 +168,7 @@ nav ul li a:hover {
   max-width: 800px;
   margin: auto;
 }
+
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -189,17 +189,16 @@ nav ul li a:hover {
 
 .whatsapp-float:hover {
   transform: scale(1.1);
-  }
+}
 
 /* Footer */
 footer {
-  background: linear-gradient(to right, #111, #333);
+  background: rgba(0, 0, 0, 0.3);
   color: white;
   text-align: center;
   padding: 20px 0;
   font-size: 14px;
 }
-
 
 footer .socials {
   margin-top: 10px;
@@ -213,5 +212,5 @@ footer .socials a {
 }
 
 footer .socials a:hover {
-  color: #ffeb3b;
-}
+  color: #25d366;
+    }
