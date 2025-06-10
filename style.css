@@ -1,102 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DANMOS - Premium Digital Devices</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-</head>
-<body>
-  <div class="moving-text-banner">
-  <p>🔥 Welcome to DANMOS — Fast Delivery | Trusted Quality | Premium Devices we offer to you our product at your convinent Location 🌐 For more information. You can also chatt with us with this WhatsApp number 📞 +2349064110521 YOU'RE ALWAYS WELCOME!!!!🔥</p>
-  </div>
-  
+/* Base Styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #1e3c72, #2a5298); /* textural blue gradient */
+  color: white;
+}
 
-  <header>
-    <div class="container header-flex">
-      <!-- Logo added here -->
-      <div class="logo">
-        <img src="image/logo.png" alt="DANMOS Logo" style="height: 100px; background: transparent;" />
-      </div>
+header {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
 
-      <h1>DANMOS</h1>
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  animation: fadeIn 2s ease-in-out;
+}
 
-      <nav>
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+.media-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
 
-  <section id="hero">
-    <div class="container">
-      <h2>Hello, Welcome to Danmos company</h2>
-      <h2>Premium Wireless Earbuds & Smartwatches</h2>
-      <p>Fast delivery. Trusted quality. Tech made simple.</p>
-    </div>
-  </section>
+.media-box:hover {
+  transform: scale(1.05);
+}
 
-  <section id="products" class="container">
-    <h2>Our Products</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="image/wire2..png" alt="Wireless Earbuds">
-        <img src="image/wire3..png" alt="Wireless Earbuds">
-        <h3>Wireless Earbuds</h3>
-        <p>High-quality sound with long battery life Just order whatever you want to now and we're Going to deliver it to you as soon as possible or click on the Whatsapp button below to message us.</p>
-      </div>
-      <div class="product-card">
-        <video height="250" width="150" controls>
-          <source src="image/wireless.mp4" type="video/mp4">
-        </video>
-        <img src="image/wire..png" alt="Wireless Earbuds">
-        <h3>Smartwatch</h3>
-        <p>Stay connected and track your health on the go with long battery life Just order whatever you want to now and we're going to deliver it to you as soon as possible or click on the Whatsapp button below to message us.</p>
-      </div>
-    </div>
-  </section>
+img, video {
+  max-width: 100%;
+  border-radius: 8px;
+}
 
-  <section id="about" class="container">
-    <h2>About DANMOS</h2>
-    <p>We deliver top-notch digital devices that keep you ahead in style and performance. Shop with confidence and enjoy fast delivery across Nigeria.</p>
-  </section>
+.hologram {
+  text-align: center;
+  padding: 3rem 1rem;
+}
 
-  <section id="contact" class="container">
-    <h2>Contact Us</h2>
-    <p>Phone: ☎️+2349064110521</p>
-    <p>Email: 📮olanrewajugbolahan321@gmail.com</p>
-  </section>
-  
-  <!-- Social Media Links -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 DANMOS. All rights reserved.</p>
-      <div class="socials">
-        <a href="https://wa.link/fzk5tm" target="_blank" title="Chat on WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://www.facebook.com/gbolahan.olanrewaju.5621" target="_blank" title="Visit Facebook">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://www.instagram.com/gbollzgee?igsh=MTMyMHVxZmJsZ3dkeg==" target="_blank" title="Visit Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.threads.com/@gbollzgee" target="_blank" title="Visit Threads">
-          <i class="fab fa-threads"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
+.rotating-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  <!-- Floating WhatsApp Icon -->
-  <a href="https://wa.link/5m0dgq" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+.rotate-3d {
+  width: 200px;
+  animation: rotate 8s linear infinite;
+  transform-style: preserve-3d;
+}
 
-</body>
-</html>
+@keyframes rotate {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  text-align: center;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00ffcc;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
