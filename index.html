@@ -9,13 +9,11 @@
 </head>
 <body>
   <div class="moving-text-banner">
-  <p>🔥 Welcome to DANMOS — Fast Delivery | Trusted Quality | Premium Devices we offer to you our product at your convinent Location 🌐 For more information. You can also chatt with us with this WhatsApp number 📞 +2349064110521 YOU'RE ALWAYS WELCOME!!!!🔥</p>
+    <p>🔥 Welcome to DANMOS — Fast Delivery | Trusted Quality | Premium Devices we offer to you our product at your convinent Location 🌐 For more information. You can also chatt with us with this WhatsApp number 📞 +2349064110521 YOU'RE ALWAYS WELCOME!!!!🔥</p>
   </div>
-  
 
   <header>
     <div class="container header-flex">
-      <!-- Logo added here -->
       <div class="logo">
         <img src="image/logo.png" alt="DANMOS Logo" style="height: 100px; background: transparent;" />
       </div>
@@ -33,7 +31,7 @@
     </div>
   </header>
 
-  <section id="hero">
+  <section id="hero" class="fade-in">
     <div class="container">
       <h2>Hello, Welcome to Danmos company</h2>
       <h2>Premium Wireless Earbuds & Smartwatches</h2>
@@ -41,14 +39,14 @@
     </div>
   </section>
 
-  <section id="products" class="container">
+  <section id="products" class="container fade-in">
     <h2>Our Products</h2>
     <div class="product-grid">
       <div class="product-card">
         <img src="image/wire2..png" alt="Wireless Earbuds">
         <img src="image/wire3..png" alt="Wireless Earbuds">
         <h3>Wireless Earbuds</h3>
-        <p>High-quality sound with long battery life Just order whatever you want to now and we're Going to deliver it to you as soon as possible or click on the Whatsapp button below to message us.</p>
+        <p>High-quality sound with long battery life...</p>
       </div>
       <div class="product-card">
         <video height="250" width="150" controls>
@@ -56,39 +54,30 @@
         </video>
         <img src="image/wire..png" alt="Wireless Earbuds">
         <h3>Smartwatch</h3>
-        <p>Stay connected and track your health on the go with long battery life Just order whatever you want to now and we're going to deliver it to you as soon as possible or click on the Whatsapp button below to message us.</p>
+        <p>Stay connected and track your health on the go...</p>
       </div>
     </div>
   </section>
 
-  <section id="about" class="container">
+  <section id="about" class="container fade-in">
     <h2>About DANMOS</h2>
-    <p>We deliver top-notch digital devices that keep you ahead in style and performance. Shop with confidence and enjoy fast delivery across Nigeria.</p>
+    <p>We deliver top-notch digital devices that keep you ahead...</p>
   </section>
 
-  <section id="contact" class="container">
+  <section id="contact" class="container fade-in">
     <h2>Contact Us</h2>
     <p>Phone: ☎️+2349064110521</p>
     <p>Email: 📮olanrewajugbolahan321@gmail.com</p>
   </section>
-  
-  <!-- Social Media Links -->
+
   <footer>
     <div class="container">
       <p>&copy; 2025 DANMOS. All rights reserved.</p>
       <div class="socials">
-        <a href="https://wa.link/fzk5tm" target="_blank" title="Chat on WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://www.facebook.com/gbolahan.olanrewaju.5621" target="_blank" title="Visit Facebook">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://www.instagram.com/gbollzgee?igsh=MTMyMHVxZmJsZ3dkeg==" target="_blank" title="Visit Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.threads.com/@gbollzgee" target="_blank" title="Visit Threads">
-          <i class="fab fa-threads"></i>
-        </a>
+        <a href="https://wa.link/fzk5tm" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/gbolahan.olanrewaju.5621" target="_blank" title="Visit Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/gbollzgee?igsh=MTMyMHVxZmJsZ3dkeg==" target="_blank" title="Visit Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.threads.com/@gbollzgee" target="_blank" title="Visit Threads"><i class="fab fa-threads"></i></a>
       </div>
     </div>
   </footer>
@@ -97,6 +86,27 @@
   <a href="https://wa.link/5m0dgq" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+  <!-- 👇 SCROLL ANIMATION SCRIPT -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
 
 </body>
 </html>
