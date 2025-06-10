@@ -1,218 +1,102 @@
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DANMOS - Premium Digital Devices</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="moving-text-banner">
+  <p>🔥 Welcome to DANMOS — Fast Delivery | Trusted Quality | Premium Devices we offer to you our product at your convinent Location 🌐 For more information. You can also chatt with us with this WhatsApp number 📞 +2349064110521 YOU'RE ALWAYS WELCOME!!!!🔥</p>
+  </div>
+  
 
-/* Moving banner at the top */
-.moving-text-banner {
-  width: 100%;
-  overflow: hidden;
-  background: rgba(0, 0, 0, 0.3);
-  color: #fff;
-  font-weight: bold;
-  padding: 10px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
+  <header>
+    <div class="container header-flex">
+      <!-- Logo added here -->
+      <div class="logo">
+        <img src="image/logo.png" alt="DANMOS Logo" style="height: 100px; background: transparent;" />
+      </div>
 
-.moving-text-banner p {
-  display: inline-block;
-  white-space: nowrap;
-  animation: scroll-left 45s linear infinite;
-  padding-left: 100%;
-}
+      <h1>DANMOS</h1>
 
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-/* Push down the rest of the content to make space for fixed banner */
-body {
-  padding-top: 50px;
-  line-height: 1.6;
-  color: #fff;
-  background: linear-gradient(to right, #10b981, #22c55e);
-}
+  <section id="hero">
+    <div class="container">
+      <h2>Hello, Welcome to Danmos company</h2>
+      <h2>Premium Wireless Earbuds & Smartwatches</h2>
+      <p>Fast delivery. Trusted quality. Tech made simple.</p>
+    </div>
+  </section>
 
-/* Container */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px 0;
-}
+  <section id="products" class="container">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="image/wire2..png" alt="Wireless Earbuds">
+        <img src="image/wire3..png" alt="Wireless Earbuds">
+        <h3>Wireless Earbuds</h3>
+        <p>High-quality sound with long battery life Just order whatever you want to now and we're Going to deliver it to you as soon as possible or click on the Whatsapp button below to message us.</p>
+      </div>
+      <div class="product-card">
+        <video height="250" width="150" controls>
+          <source src="image/wireless.mp4" type="video/mp4">
+        </video>
+        <img src="image/wire..png" alt="Wireless Earbuds">
+        <h3>Smartwatch</h3>
+        <p>Stay connected and track your health on the go with long battery life Just order whatever you want to now and we're going to deliver it to you as soon as possible or click on the Whatsapp button below to message us.</p>
+      </div>
+    </div>
+  </section>
 
-/* Header */
-header {
-  background: rgba(0, 0, 0, 0.3);
-  color: white;
-  padding: 20px 0;
-}
+  <section id="about" class="container">
+    <h2>About DANMOS</h2>
+    <p>We deliver top-notch digital devices that keep you ahead in style and performance. Shop with confidence and enjoy fast delivery across Nigeria.</p>
+  </section>
 
-header h1 {
-  float: left;
-  font-size: 28px;
-  letter-spacing: 1px;
-}
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p>Phone: ☎️+2349064110521</p>
+    <p>Email: 📮olanrewajugbolahan321@gmail.com</p>
+  </section>
+  
+  <!-- Social Media Links -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 DANMOS. All rights reserved.</p>
+      <div class="socials">
+        <a href="https://wa.link/fzk5tm" target="_blank" title="Chat on WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.facebook.com/gbolahan.olanrewaju.5621" target="_blank" title="Visit Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/gbollzgee?igsh=MTMyMHVxZmJsZ3dkeg==" target="_blank" title="Visit Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.threads.com/@gbollzgee" target="_blank" title="Visit Threads">
+          <i class="fab fa-threads"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
 
-nav ul {
-  float: right;
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
+  <!-- Floating WhatsApp Icon -->
+  <a href="https://wa.link/5m0dgq" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #25d366;
-}
-
-/* Hero section */
-#hero {
-  background: rgba(0, 0, 0, 0.2);
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-  background-blend-mode: overlay;
-}
-
-#hero h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-#hero p {
-  font-size: 18px;
-}
-
-/* Products Section */
-#products {
-  padding: 60px 0;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-#products h2 {
-  text-align: center;
-  color: white;
-  margin-bottom: 40px;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.product-card {
-  background: white;
-  border: none;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  color: #0f172a;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
-.product-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.product-card h3 {
-  color: #0f172a;
-  margin-top: 15px;
-}
-
-.product-card p {
-  color: #475569;
-}
-
-/* About and Contact Sections */
-#about, #contact {
-  padding: 60px 0;
-  background: rgba(0, 0, 0, 0.2);
-  text-align: center;
-  color: white;
-}
-
-#about h2, #contact h2 {
-  margin-bottom: 20px;
-  color: white;
-}
-
-#about p, #contact p {
-  font-size: 18px;
-  max-width: 800px;
-  margin: auto;
-}
-
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: white;
-  padding: 14px;
-  border-radius: 50%;
-  font-size: 22px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  text-decoration: none;
-  transition: transform 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-
-/* Footer */
-footer {
-  background: rgba(0, 0, 0, 0.3);
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 14px;
-}
-
-footer .socials {
-  margin-top: 10px;
-}
-
-footer .socials a {
-  color: white;
-  margin: 0 10px;
-  font-size: 18px;
-  transition: color 0.3s;
-}
-
-footer .socials a:hover {
-  color: #25d366;
-    }
-
-
+</body>
+</html>
