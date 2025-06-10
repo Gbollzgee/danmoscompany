@@ -169,6 +169,7 @@ nav ul li a:hover {
   margin: auto;
 }
 
+/* WhatsApp Floating Icon */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -213,4 +214,16 @@ footer .socials a {
 
 footer .socials a:hover {
   color: #25d366;
-    }
+}
+
+/* === Fade-In Scroll Animation === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
