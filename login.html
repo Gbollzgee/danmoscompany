@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - DANMOS</title>
+  <link rel="stylesheet" href="auth.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <img src="danmos-illustration.png" alt="DANMOS Illustration" class="top-image" />
+
+    <h2>Login to DANMOS</h2>
+    <p>Welcome back! Access your DANMOS account.</p>
+
+    <form action="index.html" method="GET">
+      <input type="email" placeholder="Email" required />
+      <div class="password-box">
+        <input type="password" id="login-password" placeholder="Password" required />
+        <i class="fa fa-eye" onclick="togglePassword('login-password', this)"></i>
+      </div>
+
+      <label class="terms">
+        <input type="checkbox" />
+        Remember Me
+      </label>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p class="login-link">
+      Don't have an account? <a href="signup.html">Signup</a>
+    </p>
+  </div>
+
+  <script>
+    function togglePassword(fieldId, icon) {
+      const passwordInput = document.getElementById(fieldId);
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+      } else {
+        passwordInput.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+      }
+    }
+  </script>
+</body>
+</html>
